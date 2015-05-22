@@ -85,7 +85,7 @@ emit_build_config: make_builddir
 make_builddir:
 	@test -d $(BUILD_DIR) || mkdir $(BUILD_DIR)
 
-$(BUILD_DIR)/plugin_print_funcnames.so: $(SRC_DIR)/plugin_print_funcnames.cpp
+$(BUILD_DIR)/plugin_print_funcnames.so: $(SRC_DIR)/my_first_plugin.cpp
 	$(CXX) $(PLUGIN_CXXFLAGS) $(CXXFLAGS) $(LLVM_CXXFLAGS) $(CLANG_INCLUDES) $^ \
 		$(PLUGIN_LDFLAGS) $(LLVM_LDFLAGS_NOLIBS) -o $@
 
